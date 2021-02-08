@@ -1,0 +1,14 @@
+spring:
+  application:
+    #服务名称
+    name: demo-gateway
+  cloud:
+    kubernetes:
+      secrets:
+        paths: /etc/secrets/asf-secrets
+      config:
+        sources:
+          - name: demo-gateway
+        namespace: demo
+      reload:
+        enabled: true
